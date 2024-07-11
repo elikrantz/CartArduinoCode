@@ -115,7 +115,7 @@ void up() {
     if (!atTop) {
       analogWrite(pinPwm, iSpeed);
       digitalWrite(pinDir, HIGH);
-    }
+    } else analogWrite(pinPwm, 0);
   }
 }
 void down() {
@@ -123,7 +123,7 @@ void down() {
     if (!atBottom) {
       analogWrite(pinPwm, iSpeed);
       digitalWrite(pinDir, LOW);
-    }
+    } else analogWrite(pinPwm, 0);
   }
 }
 
